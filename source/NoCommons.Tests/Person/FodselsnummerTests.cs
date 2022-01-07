@@ -140,6 +140,26 @@ namespace NoCommons.Tests.Person
 	        Assert.False(Fodselsnummer.IsDNumber("01010101006"));
 	        Assert.False(Fodselsnummer.IsDNumber("80000000000"));
 	        Assert.True(Fodselsnummer.IsDNumber("47086303651"));
+
+            /* Rules valid from Nov 16th 2021: https://skatteetaten.github.io/folkeregisteret-api-dokumentasjon/sporsmal-og-svar/
+             * Born 1940:
+                41014061033
+                41014065640
+                41014075603
+             */
+            Assert.True(Fodselsnummer.IsDNumber("41014061033"));
+            Assert.True(Fodselsnummer.IsDNumber("41014065640"));
+            Assert.True(Fodselsnummer.IsDNumber("41014075603"));
+
+            /* Rules valid from Nov 16th 2021: https://skatteetaten.github.io/folkeregisteret-api-dokumentasjon/sporsmal-og-svar/
+             * Born 2000:
+                41010021827
+                41010025091
+                41010034422
+             */
+            Assert.True(Fodselsnummer.IsDNumber("41010021827"));
+            Assert.True(Fodselsnummer.IsDNumber("41010025091"));
+            Assert.True(Fodselsnummer.IsDNumber("41010034422"));
         }
 
         [Fact]
