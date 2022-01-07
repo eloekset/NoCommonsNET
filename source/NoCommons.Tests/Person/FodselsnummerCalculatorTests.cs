@@ -20,21 +20,21 @@ namespace NoCommons.Tests.Person
         public void testGetFodselsnummerForDateAndGender()
         {
             List<Fodselsnummer> options = FodselsnummerCalculator.GetFodselsnummerForDateAndGender(date, KJONN.KVINNE);
-            Assert.Equal(207, options.Count);
+            Assert.Equal(328, options.Count);
         }
 
         [Fact]
         public void getValidFodselsnummerForDate()
         {
             List<Fodselsnummer> validOptions = FodselsnummerCalculator.GetManyFodselsnummerForDate(date);
-            Assert.True(validOptions.Count == 412, "Forventet 412 fødselsnumre, men fikk " + validOptions.Count);
+            Assert.True(validOptions.Count == 656, "Forventet 656 fødselsnumre, men fikk " + validOptions.Count);
         }
 
         [Fact]
         public void getValidFodselsnummerForDNumberDate()
         {
             List<Fodselsnummer> validOptions = FodselsnummerCalculator.GetManyFodselsnummerForDate(date, true);
-            Assert.True(validOptions.Count == 413, "Forventet 412 fødselsnumre som er d-nummer, men fikk " + validOptions.Count);
+            Assert.True(validOptions.Count == 656, "Forventet 656 fødselsnumre som er d-nummer, men fikk " + validOptions.Count);
         }
 
         [Fact]

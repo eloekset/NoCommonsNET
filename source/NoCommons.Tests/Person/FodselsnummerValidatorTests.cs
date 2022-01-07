@@ -39,7 +39,7 @@ namespace NoCommons.Tests.Person
         {
             try
             {
-                FodselsnummerValidator.validateIndividnummer("01015780000");
+                FodselsnummerValidator.validateIndividnummer("01015750000");
                 Assert.True(false);
             }
             catch (ArgumentException e)

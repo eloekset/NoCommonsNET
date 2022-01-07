@@ -58,14 +58,14 @@ namespace NoCommons.Person
 	        string result = null;
 	        int individnummerInt = int.Parse(GetIndividnummer());
 	        int birthYear = int.Parse(Get2DigitBirthYear());
-	        if (individnummerInt <= 499) {
-		        result = "19";
-	        } else if (individnummerInt >= 500 && birthYear < 40) {
+			if (individnummerInt <= 199 && birthYear < 40) {
+				result = "19";
+			} else if ((individnummerInt <= 499 || individnummerInt >= 600) && birthYear >= 40) {
+				result = "19";
+	        } else if (individnummerInt >= 200 && birthYear < 40) {
 		        result = "20";
-	        } else if (individnummerInt >= 500 && individnummerInt <= 749 && birthYear >= 54) {
+	        } else if (individnummerInt >= 500 && individnummerInt <= 599 && birthYear >= 58) {
 		        result = "18";
-	        } else if (individnummerInt >= 900 && birthYear > 39) {
-		        result = "19";
 	        }
 	        return result;
         }

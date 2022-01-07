@@ -41,7 +41,7 @@ namespace NoCommons.Tests.Person
         [Fact]
         public void testGetCentury() {
 	        sut = new Fodselsnummer("01016666609");
-	        Assert.Equal("18", sut.GetCentury());
+	        Assert.Equal("19", sut.GetCentury());
 
 	        sut = new Fodselsnummer("01016633301");
 	        Assert.Equal("19", sut.GetCentury());
@@ -52,21 +52,45 @@ namespace NoCommons.Tests.Person
 	        sut = new Fodselsnummer("01013366671");
 	        Assert.Equal("20", sut.GetCentury());
 
-	        // DNumber...
-	        sut = new Fodselsnummer("41016666609");
-	        Assert.Equal("18", sut.GetCentury());
-
-            sut = new Fodselsnummer("01015466609");
+            // DNumber...
+            sut = new Fodselsnummer("41015850001");
             Assert.Equal("18", sut.GetCentury());
 
-            sut = new Fodselsnummer("41016633301");
+            sut = new Fodselsnummer("41019950001");
+            Assert.Equal("18", sut.GetCentury());
+
+            sut = new Fodselsnummer("41010006609");
 	        Assert.Equal("19", sut.GetCentury());
 
-	        sut = new Fodselsnummer("41019196697");
+            sut = new Fodselsnummer("01013906609");
+            Assert.Equal("19", sut.GetCentury());
+
+            sut = new Fodselsnummer("41014063301");
+	        Assert.Equal("19", sut.GetCentury());
+
+	        sut = new Fodselsnummer("41019996697");
 	        Assert.Equal("19", sut.GetCentury());
 
 	        sut = new Fodselsnummer("41013366671");
 	        Assert.Equal("20", sut.GetCentury());
+
+            sut = new Fodselsnummer("41014061033");
+            Assert.Equal("19", sut.GetCentury());
+
+            sut = new Fodselsnummer("41014065640");
+            Assert.Equal("19", sut.GetCentury());
+
+            sut = new Fodselsnummer("41014075603");
+            Assert.Equal("19", sut.GetCentury());
+
+            sut = new Fodselsnummer("41010021827");
+            Assert.Equal("20", sut.GetCentury());
+
+            sut = new Fodselsnummer("41010025091");
+            Assert.Equal("20", sut.GetCentury());
+
+            sut = new Fodselsnummer("41010034422");
+            Assert.Equal("20", sut.GetCentury());
         }
 
         [Fact]
@@ -76,9 +100,9 @@ namespace NoCommons.Tests.Person
 
         [Fact]
         public void testGetBirthYear() {
-	        Assert.Equal("1901", sut.GetBirthYear());
+	        Assert.Equal("2001", sut.GetBirthYear());
 	        sut = new Fodselsnummer(VALID_D_FODSELSNUMMER);
-	        Assert.Equal("1901", sut.GetBirthYear());
+	        Assert.Equal("2001", sut.GetBirthYear());
         }
 
         [Fact]
